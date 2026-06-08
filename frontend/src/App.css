@@ -1,0 +1,152 @@
+:root {
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --text-color: #ffffff;
+  --primary-color: #3498db;
+  --accent-color: #e74c3c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.timer-card {
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+}
+
+.current-subject-display {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.timer-display {
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: 2rem 0;
+  color: #ffffff;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.btn-start { background-color: #2ecc71; color: white; }
+.btn-pause { background-color: #f1c40f; color: #333; }
+.btn-stop { background-color: #e74c3c; color: white; }
+
+.subjects-section, .stats-section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.subjects-section h2, .stats-section h2 {
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.subject-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.subject-item {
+  background: #333;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: 2px solid transparent;
+}
+
+.subject-item.active {
+  border-color: var(--subject-color);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.subject-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.subject-form input[type="text"] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+.subject-form button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.stat-item .name { flex: 1; }
+.stat-item .time { font-weight: bold; color: var(--primary-color); }
