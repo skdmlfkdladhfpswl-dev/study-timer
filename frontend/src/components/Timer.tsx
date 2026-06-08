@@ -6,9 +6,9 @@ interface TimerProps {
   onSessionComplete: () => void;
 }
 
-const API_URL = 'http://localhost:3001/api';
+import { API_URL } from '../config';
 
-const Timer = ({ currentSubject, onSessionComplete }: TimerProps) => {
+interface TimerProps {
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
   const startTimeRef = useRef<Date | null>(null);

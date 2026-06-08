@@ -3,13 +3,9 @@ import './App.css'
 import Timer from './components/Timer'
 import SubjectForm from './components/SubjectForm'
 
-export interface Subject {
-  id: string;
-  name: string;
-  color: string;
-}
+import { API_URL } from './config';
 
-const API_URL = 'http://localhost:3001/api';
+export interface Subject {
 
 function App() {
   const [subjects, setSubjects] = useState<Subject[]>([]);

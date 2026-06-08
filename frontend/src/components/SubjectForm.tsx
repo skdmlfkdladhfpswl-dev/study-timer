@@ -4,7 +4,7 @@ interface SubjectFormProps {
   onSubjectAdded: () => void;
 }
 
-const API_URL = 'http://localhost:3001/api';
+import { API_URL } from '../config';
 
 const SubjectForm = ({ onSubjectAdded }: SubjectFormProps) => {
   const [name, setName] = useState('');
